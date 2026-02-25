@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+<meta charset="UTF-8">
+<title> Szimulátor bemutató</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+  <style>
+ 
+  body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #000000, #0a1f44);
+  color: #e5e7eb;
+}
+</style>
+    <body><div class="container">
+  <h1>ETS2 Gamer Oldal</h1>
+  <p>Üdv a kamionos oldalamon 🚛</p>
+</div>
+    </body>
+    <style>
+header {
+  background: #020617;
+  border-bottom: 1px solid #334155;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav button {
+  background: none;
+  border: none;
+  color: #e5e7eb;
+  margin-left: 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+nav button.active {
+  color: #38bdf8;
+  border-bottom: 2px solid #38bdf8;
+}
+
+main {
+  max-width: 1000px;
+  margin: auto;
+  padding: 2rem;
+}
+
+section { display: none; }
+section.active { display: block; }
+
+.card {
+  background: #1e293b;
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
+}
+
+/* KÉP STÍLUS */
+.card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 2px solid #38bdf8;
+  transition: 0.3s;
+  margin-top: 1rem;
+}
+
+.card img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 20px #38bdf8;
+}
+
+/* MOD GOMB */
+.mod-btn {
+  display: inline-block;
+  background: #38bdf8;
+  color: #020617;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.3s;
+  margin-top: 1rem;
+}
+
+.mod-btn:hover {
+  background: #0ea5e9;
+  transform: scale(1.05);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+td, th {
+  padding: 0.7rem;
+  border-bottom: 1px solid #334155;
+  text-align: left;
+}
+
+th {
+  color: #38bdf8;
+}
+
+/* MOBIL */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  nav button {
+    margin: 0;
+    padding: 0.5rem 0.8rem;
+    font-size: 0.9rem;
+  }
+
+  main {
+    padding: 1rem;
+  }
+
+  .card img {
+    height: 180px;
+  }
+}
+</style>
+</head>
+}
+
+<body>
+
+<header>
+  <nav>
+    <button class="active" onclick="tab(event,'home')">Főoldal</button>
+    <button onclick="tab(event,'gallery')">Képek</button>
+    <button onclick="tab(event,'spec')">Gépigény</button>
+    <button onclick="tab(event,'controls')">Hogyan kezdjem?</button>
+    <button onclick="tab(event,'mods')">Modok</button>
+  </nav>
+</header>
+
+<main>
+
+<section id="home" class="active">
+  <div class="card">
+    <h3>ETS2</h3>
+    <p>🚛 Üdv az ETS2 Tudásközpontban!</br>
+
+A Euro Truck Simulator 2 világa hatalmas – de nem kell egyedül végigmenned rajta.</br>
+
+Akár most kezded a kamionos karriered, akár profi fuvaros vagy, itt megtalálsz minden útmutatót, amire szükséged van.</br>
+
+📚 Mit találsz nálunk?</br>
+
+Kezdő útmutatók: </br>
+Hogyan indulj el? Milyen kamiont vegyél? Hogyan keress gyorsan pénzt?</br>
+
+Haladó tippek & trükkök: </br>
+Gazdasági stratégia, hatékony útvonaltervezés, vállalatépítés.</br>
+
+Mod ajánlók: </br>
+Grafikai javítások, térképbővítések, realisztikus kiegészítők.</br>
+
+Beállítási segédlet:</br>
+Kormány konfigurálás, grafika optimalizálás, FPS növelés.</br>
+
+🏆 Vezess okosan. Építs birodalmat.</br>
+
+Az ETS2 nem csak vezetés – ez stratégia, türelem és fejlődés.</br>
+
+Ha szeretnél gyorsabban fejlődni, több profitot termelni és a legtöbbet kihozni a játékból, jó helyen jársz.</br>
+Indítsd be a motort – és kezdődjön az utazás.</p>
+  </div>
+</section>
+
+<section id="gallery">
+  <div class="card">
+    <h3>Képek</h3>
+    <p>A képek illusztrációk.De majd hamarosan lesz igazi kép.:)</p>
+    <img src="kamion.jpg" alt="Euro Truck Simulator 2">
+  </div>
+</section>
+
+<section id="spec">
+  <div class="card">
+    <h3>Euro Truck Simulator 2 – Gépigény</h3>
+    <table>
+      <tr><th>Komponens</th><th>Minimum</th><th>Ajánlott</th><th>Modokhoz</th>
+      <tr><td>Operációs rendszer</td><td>Windows 10 64-bit</td><td>Windows 10 / 11 64-bit</td><td> Windows 10/11 64 bit</td></tr>
+      <tr><td>Processzor</td><td>Intel i5 / Ryzen 5</td><td>Intel i7 / Ryzen 7</td><td>Intel i9/Ryzen 7</td></tr>
+      <tr><td>Memória</td><td>8 GB</td><td>16 GB</td><td>24 Gb </td></tr>
+      <tr><td>Videókártya</td><td>GTX 1060 / RX 580</td><td>RTX 2060 / RX 6600</td><td>RTX 3060/ RTX 3070</td></tr>
+      <tr><td>Tárhely</td><td>25 GB SDD</td><td>35 GB SSD</td><td>50 GB SDD</td></tr>
+    </table>
+  </div>
+</section>
+
+<section id="controls">
+  <div class="card">
+    <h3>Hogyan kezdjem?</h3>
+    <ul>
+      <li>🎮 Kormány ajánlott ha van :)</li>
+      <li>⌨️ Billentyűzet is jó kezdésnek</li>
+      <li>⚙️ Automata váltó kezdőknek</li>
+      <li>📘 Tutorial pálya ajánlott </li>
+      <li> Ha van akkor hangnavigációs mod.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="mods">
+  <div class="card">
+    <h3>Nova Hungary Map</h3>
+    <img src="nova-hungary-map.jpg" alt="Nova Hungary Map">
+    <a class="mod-btn"
+       href="https://sharemods.com/rhi4yuqslg4i/Novamap_Hungary_2.5.3_157.scs.html"
+       target="_blank">
+      ⬇️ Mod letöltése
+    </a>
+  </div>
+
+  <div class="card">
+    <h3>Hungary Map Frank007 és Indian56</h3>
+    <img src="ets2hungarymap.jpg" alt="Hungary Map">
+    <a class="mod-btn"
+       href="https://allmods.net/euro-truck-simulator-2/ets-2-maps/hungary-map-0928a-hotfix-new-ai-by-indian56-1-31-x/"
+       target="_blank">
+      ⬇️ Mod letöltése
+    </a>
+  </div>
+  <div class="card">
+    <h3>Hangnavigációs mod jáksó lászló</h3>
+    <a class="mod-btn"
+       href="https://steamcommunity.com/sharedfiles/filedetails/?id=1759757207
+       target="_blank">
+      ⬇️ Mod letöltése
+    </a>
+  </div>
+  <div class="card">
+    <h3>Hangnavigációs mod bori hang</h3>
+    <a class="mod-btn"
+       href="https://steamcommunity.com/sharedfiles/filedetails/?id=1762326674&searchtext=igo
+       target="_blank">
+      ⬇️ Mod letöltése
+    </a>
+  </div>
+  <div class="card">
+    <h3>Hangnavigációs mod péter hang</h3>
+    <a class="mod-btn"
+       href="https://steamcommunity.com/sharedfiles/filedetails/?id=1762277028&searchtext=igo
+       target="_blank">
+      ⬇️ Mod letöltése
+    </a>
+  </div>
+    
+</section>
+</main>
+
+<script>
+function tab(event,id) {
+  document.querySelectorAll("nav button").forEach(b => b.classList.remove("active"));
+  event.target.classList.add("active");
+
+  document.querySelectorAll("section").forEach(s => s.classList.remove("active"));
+  document.getElementById(id).classList.add("active");
+}
+</script>
+
+</body>
+</html>
